@@ -4,6 +4,7 @@
  */
 
 // set up data structures
+// 데이터 구조들을 구축한다.
 window.streams = {};
 streams.home = [];
 streams.users = {};
@@ -14,6 +15,8 @@ streams.users.julie = [];
 window.users = Object.keys(streams.users);
 
 // utility function for adding tweets to our data structures
+// 우리의 데이터 구조들에 트윗들을 더하는것을 위한 유틸리티 함수.
+// *유틸리티 - 컴퓨터 이용에 도움이 되는 각종 소프트웨어
 var addTweet = function(newTweet){
   var username = newTweet.user;
   streams.users[username].push(newTweet);
@@ -21,12 +24,14 @@ var addTweet = function(newTweet){
 };
 
 // utility function
+// 유틸리티 함수.
 var randomElement = function(array){
   var randomIndex = Math.floor(Math.random() * array.length);
   return array[randomIndex];
 };
 
 // random tweet generator
+// 랜덤 트윗 발생자.
 var opening = ['just', '', '', '', '', 'ask me how i', 'completely', 'nearly', 'productively', 'efficiently', 'last night i', 'the president', 'that wizard', 'a ninja', 'a seedy old man'];
 var verbs = ['drank', 'drunk', 'deployed', 'got', 'developed', 'built', 'invented', 'experienced', 'fought off', 'hardened', 'enjoyed', 'developed', 'consumed', 'debunked', 'drugged', 'doped', 'made', 'wrote', 'saw'];
 var objects = ['my', 'your', 'the', 'a', 'my', 'an entire', 'this', 'that', 'the', 'the big', 'a new form of'];
@@ -38,6 +43,7 @@ var randomMessage = function(){
 };
 
 // generate random tweets on a random schedule
+// 랜덤 스케쥴에 랜덤 트윗들을 발생시킨다.
 var generateRandomTweet = function(){
   var tweet = {};
   tweet.user = randomElement(users);
@@ -54,10 +60,13 @@ var scheduleNextTweet = function(){
   generateRandomTweet();
   setTimeout(scheduleNextTweet, Math.random() * 1500);
 };
+
 scheduleNextTweet();
 
 // utility function for letting students add "write a tweet" functionality
 // (note: not used by the rest of this file.)
+// 트윗을 쓰는 기능을 학생들에게 할 수 있도록 하기위한 유틸리티 함수.
+// 노트: 이 파일의 나머지에 의해 사용되지 않는다.
 var writeTweet = function(message){
   if(!visitor){
     throw new Error('set the global visitor property!');

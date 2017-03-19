@@ -3,25 +3,397 @@
   <head>
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
+    <title> what a wonderful tweets!</title>
+    <meta charse="utf-8">
+<!--     <style> @import url( 구글폰트 폰트 장바구니에 담고 웹페이지주소 "" 사이 복사해서 붙여넣기);</style>
+ -->    <style type="text/css">
+      *{margin:0;padding:0}
+      img,fieldset{border:0}
+      ul,ol{list-style:none}
+      em,address{font-style:normal}
+      a{text-decoration:none}
+      a:hover,a:active,a:focus{text-decoration:none}
+      body {background-color:rgb(246,246,246);}
+      #wrap{width:100%;background-color:rgb(246,246,246); font-family:serif; text-align: center margin:0 auto; overflow:scroll;}
+      #header{width:100%;background-color:white; display:inline-block; position:fixed; margin:0 auto; border-bottom: 1px solid rgb(213,213,213); padding:5px;}
+      #header a{float:left;}
+      .header-left {width:330px; margin:5px auto; }
+      .header-left {float:left; margin-left:5%;}
+      .logo {width:50px; margin :0 auto; overflow:hidden; padding:10px;}
+      .header-right {width:330px; margin:5px auto;}
+      .header-right {float:right; margin-right:5%;}
+      .header-left ul li{float:left; margin-right:5px; padding : 5px;}
+      .header-right ul li{float:right; margin-right:5px; padding : 5px;}
+      #container{width:100%; height:100%; display:inline-block; margin-top: 60px;}
+      #left {float:left; width:360px;_border:1px solid blue; height:1000px;}
+      .left-1,.left-2 {float:right; width:250px; height:300px; margin-top:10px; background-color:white; border:1px solid rgb(213,213,213); border-radius: 10px; padding:20px;}
+      .profile{width:240px; height:120px; float:left; margin-left : 5px; margin-top: 5px;}
+      .profilename{width:240px; height:60px; font-size: 13px; float:left;}
+      .profilecard{width:240px; height:60px; font-size: 13px; float:left;}
+      .profilecard ul li {float : left; margin-left:35px; margin-top:10px;}
+      .profileimage{ height:179px; margin-left:10px; margin-top : 5px;}
+      .thekiss{border :1px solid rgb(213,213,213);border-radius:10px;}
+      .myprofileface{float:left; margin : 5px; border :1px solid rgb(213,213,213);border-radius:2px;}
+      .name{padding : 10px;}
+      #right {float:right; width:360px;_border:1px solid blue;}
+      .right-1,.right-2 {float:left; width:250px; height:180px; margin-top:10px; background-color:white; border:1px solid rgb(213,213,213); border-radius: 10px; padding:20px;}
+      #middle {width:540px; margin:0 auto; overflow:hidden; border:1px solid rgb(213,213,213); border-radius: 10px; background-color:white; margin-top : 10px;}
+      .middle-1{width:540px; background-color:white; height:70px; padding:20px; }
+      .middle-2{width:540px; background-color:white; height:auto;}
+      .p { width : 540px; padding : 10px; border-top:1px solid rgb(213,213,213); margin:0 auto;}
+      .p2 { width : 540px; padding : 10px;  margin:0 auto;}
+      .newdiv{ height:35px; background-color:rgb(33,33,33); padding-top : 18px; text-align:center; color:white; }
+      .myface{ width: 40px; height:40px; float:left; border:1px solid rgb(213,213,213); }
+      #textwrite{ width : 400px; height : 70px;  float:left; margin-left : 5px;}
+      #textwrite1{ height : 20px; border:1px solid rgb(213,213,213); border-radius: 4px; color : rgb(189,189,189);}
+      #textwrite2{ height : 40px; border:1px solid rgb(213,213,213); border-radius: 4px; color : rgb(189,189,189);}
+      .writebutton{float:left; margin-top:35px; font-size:30px;}
+      .writebutton:hover{color: rgb(189,189,189);}
+      .p:hover{color: rgb(189,189,189);}
+
+    </style>
   </head>
-  <body>
+
+  <body> 
+  
+    <div id="wrap">
+        <div id="header">
+            <div class="header-left"> 
+              <ul>
+                <li>
+                  <img src="home.png" alt="home" width=20px;>
+                Home
+                </li>
+                <li>
+                  <img src="checked-symbol.png" alt="notification" width=20px;>
+                Notification
+                </li>
+                <li>
+                  <img src="envelope.png" alt="message" width=20px;>
+                Message
+                </li>
+              </ul>
+            </div>
+           
+            <div class="header-right">
+              <ul>
+                <li>
+                  <img src="magnifying-glass.png" alt="search" width=20px;>
+                Search
+                </li>
+                <li>
+                <img src="font-selection-editor.png" alt="tweet" width=20px;>
+                Tweet
+                </li>
+              </ul>
+            </div>
+
+             <div class="logo">
+              <img src="twitter-black-shape.png" alt="twitter" width=20px;>
+            </div>
+        </div>
+        
+        <div id="container">
+            <div id="left">
+                <div class="left-1">
+                    <div class="profileimage">
+                      <img class="thekiss" src="thekiss.JPG" alt="thekiss" width=230px;>
+                    </div>
+                    <div class="profile">
+                        
+                          
+                        <div class="profilename">
+                            <img class="myprofileface" src="myface.JPG" alt="face" width=50px;>
+                            <div class="name">
+                                <a>Youduk Han</a>
+                            </div>
+                            <span class="id">
+                                rnejrl123@
+                            </span>
+                        </div>
+                        <div class="profilecard">
+                            <ul>
+                                <li>트윗</li>
+                                <li>팔로윙</li>
+                                <li>팔로워</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="left-2">
+                </div>
+            </div>
+            <div id="right">
+                <div class="right-1">
+                </div>
+                <div class="right-2">
+                </div>
+            </div>
+            <div id="middle">
+                <div class="middle-1">
+                    <div class="myface">
+                      <img src="myface.JPG" alt="myface" width=40px;>
+                    </div>
+                    <div id="textwrite">
+                      <textarea id="textwrite1" row="2" cols="17" onclick="this.value=''">이름</textarea>
+
+                      <textarea id="textwrite2" row="6" cols="62" onclick="this.value=''">당신의 생각을 공유해보세요.</textarea>
+                    </div>
+                    <div class="buttonspace">
+                      <input type="button" class="writebutton" value="tweet!">
+                    </div>
+                </div>
+                <div class="middle-2">
+                </div>            
+            </div>
+
+             <div id="footer">        
+             </div>
+        </div>
+
+    </div>
+
+
+
     <script>
 
+
       $(document).ready(function(){
-        var $body = $('body');
-        $body.html('');
+        
+        var $contents = $('.middle-2');
+        var $meditatorbox = $('<div class="meditatorbox"></div>');
 
-        var index = streams.home.length - 1;
-        while(index >= 0){
-          var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
-          index -= 1;
-        }
+        var index = streams.home.length - 1; 
 
+            while(index >= 0){ 
+
+            var tweet = streams.home[index]; 
+            var $tweet = $('<div class="p"></div>'); 
+            var name = tweet.user;
+
+            var old = tweet.created_at;
+            var now = new Date();
+
+            var gap = now.getTime() - old.getTime();
+
+            var min_gap = gap / 1000 / 60;
+
+
+              if(min_gap<1){
+                $tweet.text('@ ' + name + ' : ' + Math.round(min_gap*60) + '초 전' );
+              }else if(min_gap>=1){
+                $tweet.text('@ ' + name + ' : ' + Math.round(min_gap) + '분 전');
+              }else if(min_gap>=60){
+                $tweet.text('@ ' + name + ' : ' + Math.round(min_gap/60) + '시간 전');
+              }
+
+
+            var $tweet2 = $('<div class="p2"></div>');
+            $tweet2.text(tweet.message);
+            $meditatorbox.append($tweet,$tweet2);
+            $contents.append($meditatorbox);
+
+            index -= 1;
+            } 
+
+        var newdiv = $('<div class="newdiv"></div>');
+        $('.middle-2').before(newdiv);
+        newdiv.text('0 new tweet!');
+
+        setInterval(function(){
+          var nowtweets = streams.home.length;
+          var alertedtweets = $('.p').length;
+          var newtweets = nowtweets - alertedtweets;
+          
+        newdiv.text(newtweets + ' new tweets!');
+        $('.newdiv').show();
+  
+        },3000)
+
+        var newtweetsbutton = $('<div class="newtweetsbutton"></div>');
+        newtweetsbutton.text();
+        $('.newdiv').click(function(){
+          var nowIndex = streams.home.length;
+          var originalIndex = $('.p').length;
+
+            while(nowIndex > originalIndex ){
+
+              var tweet = streams.home[nowIndex-1]; 
+              var $tweet = $('<div class="p"></div>');
+              var $tweet2 = $('<div class="p2"></div>');
+              $tweet2.text(tweet.message);
+              $meditatorbox.prepend($tweet,$tweet2);
+              
+              nowIndex -= 1;
+
+            }
+
+            for(var i=0; i<streams.home.length; i++){
+
+              var tweet = streams.home[i]
+              var old = tweet.created_at
+              var now = new Date()
+
+              var gap = now.getTime() - old.getTime();
+
+              var min_gap = gap / 1000 / 60;
+
+                if(min_gap<1){
+                  $(".p").eq(streams.home.length-i-1).text('@ ' + tweet.user + ' : ' + Math.round(min_gap*60) + '초 전');
+                }else if(min_gap>=1){
+                  $(".p").eq(streams.home.length-i-1).text('@ ' + tweet.user + ' : ' + Math.round(min_gap) + '분 전');
+                }else if(min_gap>=60){
+                  $(".p").eq(streams.home.length-i-1).text('@ ' + tweet.user + ' : ' + Math.round(min_gap/60) + '시간 전');
+                }
+
+            };
+          
+          $('.newdiv').hide();
+          $(".p").on("click",function(){
+            var result = [];
+            var str = $(this).html();
+              for(var i = 2; i<str.length; i++){
+                if(str[i] === ' '){
+                  break;
+                }
+              result.push(str[i]);
+            }
+            var clicked = result.join('');
+              for(var i = 0; i<$('.p').length; i++){
+                var result2 =[];
+                var strP = $('.p').eq(i).html();
+                var contents1 = $('.p').eq(i);
+                var contents2 = $('.p2').eq(i);
+                  for(var j = 2; j<strP.length; j++){
+                    if(strP[j] === ' '){
+                      break;
+                    }
+                    result2.push(strP[j]);
+                    var nowclicked = result2.join('');
+                  }
+                if(nowclicked !== clicked){
+                  contents1.hide();
+                  contents2.hide();
+                }
+              };
+            $(".p").on("click",function(){
+              var result = [];
+            
+              var str = $(this).html();
+                for(var i = 2; i<str.length; i++){
+                  if(str[i] === ' '){
+                    break;
+                  }
+                result.push(str[i]);
+                }
+              var clicked = result.join('');
+                for(var i = 0; i<$('.p').length; i++){
+                  var result2 =[];
+                  var strP = $('.p').eq(i).html();
+                  var contents1 = $('.p').eq(i);
+                  var contents2 = $('.p2').eq(i);
+                    for(var j = 2; j<strP.length; j++){
+                      if(strP[j] === ' '){
+                        break;
+                      }
+                  result2.push(strP[j]);
+                  var nowclicked = result2.join('');
+                  }
+                if(nowclicked !== clicked){
+                  contents1.show();
+                  contents2.show();
+                }
+              }
+            })
+        })
       });
+        $(".p").on("click",function(){
+
+          var result = [];
+          
+          var str = $(this).html();
+            for(var i = 2; i<str.length; i++){
+              if(str[i] === ' '){
+                break;
+              }
+            result.push(str[i]);
+            }
+          var clicked = result.join('');
+            for(var i = 0; i<$('.p').length; i++){
+                var result2 =[];
+                var strP = $('.p').eq(i).html();
+                var contents1 = $('.p').eq(i);
+                var contents2 = $('.p2').eq(i);
+                for(var j = 2; j<strP.length; j++){
+
+                  if(strP[j] === ' '){
+                    break;
+                  }
+
+                result2.push(strP[j]);
+                var nowclicked = result2.join('');
+            }
+            
+            if(nowclicked !== clicked){
+              
+              contents1.hide();
+              contents2.hide();
+            }
+
+            }
+
+          $(".p").on("click",function(){
+          var result = [];
+          
+          var str = $(this).html();
+            for(var i = 2; i<str.length; i++){
+              if(str[i] === ' '){
+                break;
+              }
+            result.push(str[i]);
+          }
+          var clicked = result.join('');
+            for(var i = 0; i<$('.p').length; i++){
+                var result2 =[];
+                var strP = $('.p').eq(i).html();
+                var contents1 = $('.p').eq(i);
+                var contents2 = $('.p2').eq(i);
+                for(var j = 2; j<strP.length; j++){
+
+                  if(strP[j] === ' '){
+                    break;
+                  }
+
+                result2.push(strP[j]);
+                var nowclicked = result2.join('');
+                }
+            
+            if(nowclicked !== clicked){
+
+              contents1.show();
+              contents2.show();
+            }
+
+            }
+            
+          })
+        })
+
+        $(".writebutton").click(function(){
+            var p1 = document.getElementById("textwrite1").value;
+            var p2 = document.getElementById("textwrite2").value;
+            var p3 = '@ ' + p1 + ' : ' + Math.round(min_gap*60) + '초 전';
+            $tweet.text(p3)
+            $tweet2.text(p2);
+            $meditatorbox.prepend($tweet,$tweet2);            
+        });
+
+    });
+  
+
 
     </script>
+
+
   </body>
 </html>
